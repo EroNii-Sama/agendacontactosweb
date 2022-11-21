@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contactos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk">
+    <link href="css/contactos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+    <!-- Theme color -->
+    <meta name="theme-color" content="#563d7c">
+</head>
+<body style="display:none">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <h5 class="my-0 mr-md-auto font-weight-normal">Contactos</h5>
+        <nav class="my-2 my-md-0 mr-md-3">
+            <a class="p-2 text-dark" href="#" id="conected-user"></a>
+        </nav>
+        <a class="btn btn-outline-primary" href="#" id="btn-salir">Salir</a>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12 mb-3">
+                <h1 id="page-title"></h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 mb-3">
+                <a href="index.html" class="btn btn-secondary">Volver a la Lista de Contactos</a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                <input type="hidden" id="contactoId" value="0">
+
+                <div class="form-group">
+                    <label for="nombreContacto">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombreContacto">
+                    <div class="text-danger validation" style="display: none" id="validation-name">
+                        El nombre del Contacto es requerido
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" class="form-control" id="email">
+                    <div class="text-danger validation" style="display: none" id="validation-email">
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="telefono">Telefono</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control telephone" id="telefono">
+                        <div class="input-group-append">
+                            <span class="input-group-text pointer" id="add-phone">
+                                <i class="fa-solid fa-plus"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-danger validation" style="display: none" id="validation-telefono">
+                        El número de teléfono es requerido
+                    </div>
+                </div>
+
+                <div id="phone-list">
+                    
+                </div>
+
+                <div class="form-group">
+                    <label>Imagen</label>
+                    <input type="hidden" id="imageId" value="0" />
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="imageUploader" lang="es">
+                        <label class="custom-file-label" for="customFileLang">Seleccionar Archivo</label>
+                    </div>
+                    <div class="mt-3">
+                        <img id="miniatura" src="img/User-icon.png" class="img-thumbnail" alt="">
+                    </div>
+                </div>
+
+
+
+                <div class="alert alert-danger" id="msg-error" style="display: none" role="alert">
+                    Ocurrió un error al guardar el contacto
+                </div>
+
+                <div class="form-group">
+                    <input type="button" value='Guardar' id='btn-save' class="btn btn-primary">
+                    <a href="index.html" class="btn">Cancelar</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="js/utils.js"></script>
+    <script src="js/contacto-frm.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contactos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk">
+        <link href="css/contactos.css" rel="stylesheet">
+        <!-- Theme color -->
+        <meta name="theme-color" content="#563d7c">
+    </head>
+    <body style="display:none">
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+            <h5 class="my-0 mr-md-auto font-weight-normal">Contactos</h5>
+            <nav class="my-2 my-md-0 mr-md-3">
+                <a class="p-2 text-dark" href="#" id="conected-user"></a>
+            </nav>
+            <a class="btn btn-outline-primary" href="#" id="btn-salir">Salir</a>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <h1>Lista de Contactos</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 mb-3" id="ok_contact_saved" style="display: none;">
+                    <div class="alert alert-success" role="alert">
+                        El contacto fue guardado correctamente.
+                    </div>
+                </div>
+                <div class="col-12 mb-3">
+                    <a href="contacto-frm.html" class="btn btn-primary">Nuevo contacto</a>
+                </div>
+            </div>
+
+            <div class="row" id="contactos">
+
+                <!--<div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <div class="card mb-4">
+                        <div class="text-center mt-3 mb-3">
+                            <img src="img/User-icon.png" class="card-img-top contacto-img" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Jhon Smith</h5>
+                            <div class="card-text mb-2">
+                                <div class="mb-1"><strong>Teléfono:</strong> 700 00000</div>
+                                <div>
+                                    <strong>Correo electrónico:</strong>
+                                    jhon.smith@example.com
+                                </div>
+                            </div>
+                            <a href="contacto-frm.html?id=0" class="btn btn-primary btn-block">Editar</a>
+                            <button type="button" class="btn btn-danger btn-block" onclick="eliminarContacto(0)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <div class="card mb-4">
+                        <div class="text-center mt-3 mb-3">
+                            <img src="img/User-icon.png" class="card-img-top contacto-img" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Frank N. Cheeseman
+                            </h5>
+                            <div class="card-text mb-2">
+                                <div class="mb-1">
+                                    <strong>
+                                        Teléfono:
+                                    </strong>
+                                    801-798-4758
+                                </div>
+                                <div>
+                                    <strong>Correo electrónico:</strong>
+                                    frank.cheesemanh@example.com
+                                </div>
+                            </div>
+                            <a href="contacto-frm.html?id=0" class="btn btn-primary btn-block">Editar</a>
+                            <button type="button" class="btn btn-danger btn-block" onclick="eliminarContacto(0)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <div class="card mb-4">
+                        <div class="text-center mt-3 mb-3">
+                            <img src="img/User-icon.png" class="card-img-top contacto-img" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                William M. Sellers
+                            </h5>
+                            <div class="card-text mb-2">
+                                <div class="mb-1">
+                                    <strong>
+                                        Teléfono:
+                                    </strong>
+                                    845-367-8105
+                                </div>
+                                <div>
+                                    <strong>Correo electrónico:</strong>
+                                    william.sellers@example.com
+                                </div>
+                            </div>
+                            <a href="contacto-frm.html?id=0" class="btn btn-primary btn-block">Editar</a>
+                            <button type="button" class="btn btn-danger btn-block" onclick="eliminarContacto(0)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <div class="card mb-4">
+                        <div class="text-center mt-3 mb-3">
+                            <img src="img/User-icon.png" class="card-img-top contacto-img" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Collen W. Johnson
+                            </h5>
+                            <div class="card-text mb-2">
+                                <div class="mb-1">
+                                    <strong>Teléfono:</strong>
+                                    641-781-8797
+                                </div>
+                                <div>
+                                    <strong>Correo electrónico:</strong>
+                                    collen.johnson@example.com
+                                </div>
+                            </div>
+                            <a href="contacto-frm.html?id=0" class="btn btn-primary btn-block">Editar</a>
+                            <button type="button" class="btn btn-danger btn-block" onclick="eliminarContacto(0)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 ">
+                    <div class="card mb-4">
+                        <div class="text-center mt-3 mb-3">
+                            <img src="img/User-icon.png" class="card-img-top contacto-img" alt="">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Venessa L. Turnbull
+                            </h5>
+                            <div class="card-text mb-2">
+                                <div class="mb-1">
+                                    <strong>Teléfono:</strong>
+                                    925-263-2956
+                                </div>
+                                <div>
+                                    <strong>Correo electrónico:</strong>
+                                    vanessa.turnbull@example.com
+                                </div>
+                            </div>
+                            <a href="contacto-frm.html?id=0" class="btn btn-primary btn-block">Editar</a>
+                            <button type="button" class="btn btn-danger btn-block" onclick="eliminarContacto(0)">Eliminar</button>
+                        </div>
+                    </div>
+                </div>-->
+
+
+            </div>
+        </div>
+        <script src="js/utils.js"></script>
+        <script src="js/contacto.js"></script>
+    </body>
+</html>

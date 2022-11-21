@@ -1,0 +1,12 @@
+img.contacto-img{
+    border-radius: 100%;
+    width: 150px;
+}
+
+.validation{
+    font-size: 10px !important;
+}
+
+.pointer {
+    cursor: pointer;
+}
